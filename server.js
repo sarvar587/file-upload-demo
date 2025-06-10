@@ -1,6 +1,10 @@
 import http from 'node:http'; // For creating the HTTP server
 import fs from 'node:fs';  // For file system operations (creating directories, writing files)
 import path from 'node:path';   // For resolving file paths
+import { fileURLToPath } from 'node:url'; // For converting URL to file path
+
+const __filename = fileURLToPath(import.meta.url); // Get the current file's path
+const __dirname = path.dirname(__filename); // Get the directory name of the current file
 
 // Define the port the server will listen on
 const PORT = 3000;
